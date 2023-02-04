@@ -1,3 +1,10 @@
 li {
-    transition: all 0.3s ease;
+    :hover{
+        color: #2AB7A6;
+        transition: al 0.3s ease-in-out;
+    }
+}
+
+* {
+    text-decoration-line: none;
 }

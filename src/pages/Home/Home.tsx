@@ -1,8 +1,16 @@
-import React, {FC} from 'react'
+import { FC } from 'react'
 
 const Home: FC = () => {
   return (
-    <div className="text-3xl font-bold underline">Home</div>
+    <div className='container'>
+      <div>
+        <h1
+          className='text-white text-5xl'
+        >
+          Hey, I’m Alisher, a frontend developer not much experience
+        </h1>
+      </div>
+    </div>
   )
 }
 

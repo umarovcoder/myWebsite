@@ -3,11 +3,28 @@
 @tailwind utilities;
 
 
+::selection {
+    color: #fff;
+    background-color: #2AB7A6;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: #fff;
+    background: #2AB7A6;
+}
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Clash Display', sans-serif;
+}
+
+body {
+    background-color: #18181B;
+
 }
 
 .container {
