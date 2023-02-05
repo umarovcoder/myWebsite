@@ -1,8 +1,11 @@
-import React from 'react'
+import { FC } from 'react'
 
-const Contact = () => {
+const Contact: FC = () => {
   return (
-    <div>Contact</div>
+    <>
+    <title>Contact - Alisher</title>
+      <div className='text-white'>Contafffct</div>
+    </>
   )
 }
 
