@@ -7,7 +7,7 @@ const Footer: FC = () => {
             <hr className='border-solid border-1 border-[#27272C] mt-[8rem]' />
             <div className='container py-40 flex gap-[100px] items-center'>
                 <div>
-                    <h1 className='text-white text-7xl'>Got a Project to work with?</h1>
+                    <h1 className='text-white text-7xl w-[80%]'>Got a Project to work with?</h1>
                 </div>
                 <div>
                     <Link to={'/contact'}>
@@ -22,7 +22,7 @@ const Footer: FC = () => {
                 </div>
             </div>
 
-            <div className='container pb-16'>
+            <div className='container pb-14'>
                 <div className='flex justify-center gap-7'>
                     <Link target={'_blank'} to={'https://github.com/Alisher-Umarov'}>
                         <span>
