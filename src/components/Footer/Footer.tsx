@@ -41,7 +41,7 @@ const Footer: FC = () => {
                     </Link>
                 </div>
                 <div className='flex justify-center mt-5'>
-                    <p className='text-slate-300 text-1xl'>Copyright © 2023 • Alisher's blog - Alisher's coding journey</p>
+                    <p className='text-slate-300 text-1xl'>Copyright © 2023 • Alisher's blog - All rights reserved.</p>
                 </div>
             </div>
         </>
