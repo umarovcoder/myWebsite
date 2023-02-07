@@ -27,7 +27,7 @@ const Header: FC = () => {
                 <li 
                     className='text-xl cursor-pointer hover:underline underline-offset-4'
                 >
-                    <Link to={'/works'}>Works</Link>
+                    <Link to={'/projects'}>Projects</Link>
                 </li>
                 <li 
                     className='text-xl cursor-pointer hover:underline underline-offset-4'
