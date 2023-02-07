@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.scss'
 
@@ -9,37 +9,48 @@ const Header: FC = () => {
         header.classList.toggle('sticky', window.scrollY >= 0)
     });
 
+    const [active, setActive] = useState('home')
+
+    const handleClick = (name: string) => {
+        setActive(name);
+    };
+
     return (
-        <header className='container flex justify-between py-5'>
+        <header className='container flex justify-between items-center max-w-4xl w-full py-8 my-0 md:my-8 mx-auto opacity-80'>
             <h2 className="text-3xl font-bold cursor-pointer text-white dark:text-white">
                 <Link to={'/'}>Alisher <br /> Umarov.</Link>
             </h2>
 
-            <ul className='flex flex-row items-center gap-10 text-white z-20'>
+            <ul className='flex flex-row items-center gap-10 text-white'>
                 <li
-                    className='text-xl cursor-pointer hover:underline underline-offset-4 z-20'
+                    onClick={() => handleClick('home')}
+                    className='text-xl cursor-pointer'
                 >
-                    <Link to={'/'}>Home</Link>
+                    <Link className={active === 'home' ? 'active' : ''} to={'/'}>Home</Link>
                 </li>
                 <li
-                    className='text-xl cursor-pointer hover:underline underline-offset-4'
+                    onClick={() => handleClick('about')}
+                    className='text-xl cursor-pointer'
                 >
-                    <Link to={'/about'}>About</Link>
+                    <Link className={active === 'about' ? 'active' : ''} to={'/about'}>About</Link>
                 </li>
                 <li
-                    className='text-xl cursor-pointer hover:underline underline-offset-4'
+                    onClick={() => handleClick('articles')}
+                    className='text-xl cursor-pointer'
                 >
-                    <Link to={'/articles'}>Articles</Link>
+                    <Link className={active === 'articles' ? 'active' : ''} to={'/articles'}>Articles</Link>
                 </li>
                 <li
-                    className='text-xl cursor-pointer hover:underline underline-offset-4'
+                    onClick={() => handleClick('projects')}
+                    className='text-xl cursor-pointer'
                 >
-                    <Link to={'/projects'}>Projects</Link>
+                    <Link className={active === 'projects' ? 'active' : ''} to={'/projects'}>Projects</Link>
                 </li>
                 <li
-                    className='text-xl cursor-pointer hover:underline underline-offset-4'
+                    onClick={() => handleClick('contact')}
+                    className='text-xl cursor-pointer'
                 >
-                    <Link to={'/contact'}>Contact</Link>
+                    <Link className={active === 'contact' ? 'active' : ''} to={'/contact'}>Contact</Link>
                 </li>
             </ul>
         </header >

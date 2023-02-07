@@ -1,18 +1,18 @@
-// header {
-//     position: fixed;
-//     background-color: #18181B;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     z-index: 9;
-//     transition: 0.5s ease;
-//     left: 150px;
-// }
+header {
+    background-color: #18181B;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+    transition: 0.5s ease;
+}
 
-// .sticky {
-//     filter: blur(8px);
-//     -webkit-filter: blur(8px);
-// }
+
+.active {
+    color: #2AB7A6;
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+}
