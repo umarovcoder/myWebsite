@@ -11,13 +11,13 @@ const Header: FC = () => {
 
     return (
         <header className='container flex justify-between py-5'>
-            <h2 className="text-3xl font-bold cursor-pointer text-white">
+            <h2 className="text-3xl font-bold cursor-pointer text-white dark:text-white">
                 <Link to={'/'}>Alisher <br /> Umarov.</Link>
             </h2>
 
-            <ul className='flex flex-row items-center gap-10 text-white'>
+            <ul className='flex flex-row items-center gap-10 text-white z-20'>
                 <li
-                    className='text-xl cursor-pointer hover:underline underline-offset-4'
+                    className='text-xl cursor-pointer hover:underline underline-offset-4 z-20'
                 >
                     <Link to={'/'}>Home</Link>
                 </li>
@@ -42,7 +42,7 @@ const Header: FC = () => {
                     <Link to={'/contact'}>Contact</Link>
                 </li>
             </ul>
-        </header>
+        </header >
     )
 }
 
