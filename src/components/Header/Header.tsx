@@ -9,7 +9,7 @@ const Header: FC = () => {
         header.classList.toggle('sticky', window.scrollY >= 0)
     });
 
-    const [active, setActive] = useState('home')
+    const [active, setActive] = useState<string>('home')
 
     const handleClick = (name: string) => {
         setActive(name);
