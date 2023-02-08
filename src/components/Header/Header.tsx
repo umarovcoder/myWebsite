@@ -24,31 +24,31 @@ const Header: FC = () => {
             <ul className='flex flex-row items-center gap-10 text-white'>
                 <li
                     onClick={() => handleClick('home')}
-                    className='text-xl cursor-pointer'
+                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
                 >
                     <Link className={active === 'home' ? 'active' : ''} to={'/'}>Home</Link>
                 </li>
                 <li
                     onClick={() => handleClick('about')}
-                    className='text-xl cursor-pointer'
+                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
                 >
                     <Link className={active === 'about' ? 'active' : ''} to={'/about'}>About</Link>
                 </li>
                 <li
                     onClick={() => handleClick('articles')}
-                    className='text-xl cursor-pointer'
+                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
                 >
                     <Link className={active === 'articles' ? 'active' : ''} to={'/articles'}>Articles</Link>
                 </li>
                 <li
                     onClick={() => handleClick('projects')}
-                    className='text-xl cursor-pointer'
+                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
                 >
                     <Link className={active === 'projects' ? 'active' : ''} to={'/projects'}>Projects</Link>
                 </li>
                 <li
                     onClick={() => handleClick('contact')}
-                    className='text-xl cursor-pointer'
+                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
                 >
                     <Link className={active === 'contact' ? 'active' : ''} to={'/contact'}>Contact</Link>
                 </li>
