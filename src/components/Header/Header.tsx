@@ -4,10 +4,10 @@ import './Header.scss'
 
 const Header: FC = () => {
 
-    // window.addEventListener('scroll', function () {
-    //     const header: any = this.document.querySelector('header');
-    //     header.classList.toggle('sticky', window.scrollY >= 0)
-    // });
+    window.addEventListener('scroll', function () {
+        const header: any = this.document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY >= 0)
+    });
 
     const [active, setActive] = useState<string>('home')
 
@@ -16,7 +16,7 @@ const Header: FC = () => {
     };
 
     return (
-        <header className='container flex justify-between items-center max-w-4xl w-full py-8 my-0 md:my-8 mx-auto opacity-80'>
+        <header className='container sticky flex justify-between items-center max-w-4xl w-full py-8 my-0 backdrop-blur'>
             <h2 className="text-3xl font-bold cursor-pointer text-white dark:text-white">
                 <Link to={'/'}>Alisher <br /> Umarov.</Link>
             </h2>
@@ -26,7 +26,7 @@ const Header: FC = () => {
                     onClick={() => handleClick('home')}
                     className='text-xl cursor-pointer hover:text-[#2AB7A6]'
                 >
-                    <Link className={active === 'home' ? 'active' : ''} to={'/'}>Home</Link>
+                    <Link to={'/'} className={active === 'home' ? 'active' : ''}>Home</Link>
                 </li>
                 <li
                     onClick={() => handleClick('about')}
