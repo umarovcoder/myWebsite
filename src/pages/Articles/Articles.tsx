@@ -14,4 +14,4 @@ const Articles: FC = () => {
   )
 }
 
-export default Articles
+export default Articles;
