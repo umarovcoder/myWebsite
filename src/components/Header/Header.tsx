@@ -16,43 +16,45 @@ const Header: FC = () => {
     };
 
     return (
-        <header className='container sticky flex justify-between items-center max-w-4xl w-full py-8 my-0 backdrop-blur'>
-            <h2 className="text-3xl font-bold cursor-pointer text-white dark:text-white">
-                <Link to={'/'}>Alisher <br /> Umarov.</Link>
-            </h2>
+        <header className='sticky py-7 opacity-80 truncate'>
+            <div className='flex justify-between items-center w-full max-w-[1200px] mx-auto'>
+                <h2 className="text-3xl font-bold cursor-pointer text-white dark:text-white">
+                    <Link to={'/'}>Alisher <br /> Umarov.</Link>
+                </h2>
 
-            <ul className='flex flex-row items-center gap-10 text-white'>
-                <li
-                    onClick={() => handleClick('home')}
-                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                >
-                    <Link to={'/'} className={active === 'home' ? 'active' : ''}>Home</Link>
-                </li>
-                <li
-                    onClick={() => handleClick('about')}
-                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                >
-                    <Link className={active === 'about' ? 'active' : ''} to={'/about'}>About</Link>
-                </li>
-                <li
-                    onClick={() => handleClick('articles')}
-                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                >
-                    <Link className={active === 'articles' ? 'active' : ''} to={'/articles'}>Articles</Link>
-                </li>
-                <li
-                    onClick={() => handleClick('projects')}
-                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                >
-                    <Link className={active === 'projects' ? 'active' : ''} to={'/projects'}>Projects</Link>
-                </li>
-                <li
-                    onClick={() => handleClick('contact')}
-                    className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                >
-                    <Link className={active === 'contact' ? 'active' : ''} to={'/contact'}>Contact</Link>
-                </li>
-            </ul>
+                <ul className='flex flex-row items-center gap-10 text-white'>
+                    <li
+                        onClick={() => handleClick('home')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link to={'/'} className={active === 'home' ? 'active' : ''}>Home</Link>
+                    </li>
+                    <li
+                        onClick={() => handleClick('about')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link className={active === 'about' ? 'active' : ''} to={'/about'}>About</Link>
+                    </li>
+                    <li
+                        onClick={() => handleClick('articles')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link className={active === 'articles' ? 'active' : ''} to={'/articles'}>Articles</Link>
+                    </li>
+                    <li
+                        onClick={() => handleClick('projects')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link className={active === 'projects' ? 'active' : ''} to={'/projects'}>Projects</Link>
+                    </li>
+                    <li
+                        onClick={() => handleClick('contact')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link className={active === 'contact' ? 'active' : ''} to={'/contact'}>Contact</Link>
+                    </li>
+                </ul>
+            </div>
         </header >
     )
 }
