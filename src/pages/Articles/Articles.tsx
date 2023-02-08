@@ -1,10 +1,14 @@
-import React from 'react'
+import {FC} from 'react'
 
-const Articles = () => {
+const Articles: FC = () => {
   return (
     <>
     <title>Articles - Alisher</title>
-      <div>Articles</div>
+      <div className='container pt-32'>
+        <div>
+          <h1 className='text-white text-5xl w-[60%]'>Writing on software and programming</h1>
+        </div>
+      </div>
     </>
   )
 }

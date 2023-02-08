@@ -6,7 +6,7 @@ const About: FC = () => {
   return (
     <>
       <title>About - Alisher</title>
-      <div className='container flex justify-between items-center pt-32 gap-[10rem]'>
+      <div className='container flex justify-between pt-32 gap-[10rem]'>
         <div className='flex-col'>
           <h1 className='text-white text-5xl pb-7'>
           Hi, I'm a Alisher Umarov, a tech and programming enthusiast
