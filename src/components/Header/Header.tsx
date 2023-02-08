@@ -4,10 +4,10 @@ import './Header.scss'
 
 const Header: FC = () => {
 
-    window.addEventListener('scroll', function () {
-        const header: any = this.document.querySelector('header');
-        header.classList.toggle('sticky', window.scrollY >= 0)
-    });
+    // window.addEventListener('scroll', function () {
+    //     const header: any = this.document.querySelector('header');
+    //     header.classList.toggle('sticky', window.scrollY >= 0)
+    // });
 
     const [active, setActive] = useState<string>('home')
 
