@@ -10,7 +10,7 @@ const Home: FC = () => {
           >
             Hey, I’m Alisher, a frontend developer
           </h1>
-          <p className='text-white text-[18px] py-3 w-[60%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto sequi exercitationem eos, sint neque quam nostrum assumenda repellat fugiat!</p>
+          <p className='text-white text-1xl py-3 w-[60%]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto sequi exercitationem eos, sint neque quam nostrum assumenda repellat fugiat!</p>
       </div>
     </>
   )
