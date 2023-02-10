@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 const Home: FC = () => {
   return (
@@ -16,4 +16,4 @@ const Home: FC = () => {
   )
 }
 
-export default Home
+export default Home;

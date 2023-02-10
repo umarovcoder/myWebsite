@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import me from '../../assets/Imgs/me2.jpg'
+import { FC } from 'react';
+import me from '../../assets/Imgs/me2.jpg';
 
 
 const About: FC = () => {
@@ -21,4 +21,4 @@ const About: FC = () => {
   )
 }
 
-export default About
+export default About;

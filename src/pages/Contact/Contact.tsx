@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 const Contact: FC = () => {
   return (
@@ -9,4 +9,4 @@ const Contact: FC = () => {
   )
 }
 
-export default Contact
+export default Contact;
