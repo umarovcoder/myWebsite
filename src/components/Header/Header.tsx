@@ -1,6 +1,6 @@
-import { FC, useState } from 'react'
+import { FC, useState } from 'react';
 import { Link } from 'react-router-dom'
-import './Header.scss'
+import './Header.scss';
 
 const Header: FC = () => {
 
@@ -59,4 +59,4 @@ const Header: FC = () => {
     )
 }
 
-export default Header
+export default Header;

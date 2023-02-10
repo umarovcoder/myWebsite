@@ -1,5 +1,5 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: FC = () => {
     return (
@@ -48,4 +48,4 @@ const Footer: FC = () => {
     )
 }
 
-export default Footer
+export default Footer;

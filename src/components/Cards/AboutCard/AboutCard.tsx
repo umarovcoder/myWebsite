@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC } from 'react';
 
 const AboutCard: FC = () => {
   return (
@@ -24,4 +24,4 @@ const AboutCard: FC = () => {
   )
 }
 
-export default AboutCard
+export default AboutCard;

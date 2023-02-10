@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const Helper = () => {
+const ScrollToTop = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -15,4 +15,4 @@ const Helper = () => {
     return null
 }
 
-export default Helper;
+export default ScrollToTop;
