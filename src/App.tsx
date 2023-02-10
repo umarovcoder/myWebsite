@@ -1,8 +1,8 @@
-import { FC } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Footer from './components/Footer/Footer'
-import Header from './components/Header/Header'
-import { routes } from './routes'
+import { FC } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import { routes } from './routes';
 
 const App: FC = () => {
   return (
