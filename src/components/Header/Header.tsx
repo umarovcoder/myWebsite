@@ -1,5 +1,7 @@
 import { FC, useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { RiMenu4Line } from 'react-icons/ri';
+import { CgClose } from 'react-icons/cg';
 import './Header.scss';
 
 const Header: FC = () => {
@@ -9,7 +11,8 @@ const Header: FC = () => {
         header.classList.toggle('sticky', window.scrollY >= 0)
     });
 
-    const [active, setActive] = useState<string>('home')
+    const [active, setActive] = useState<string>('home');
+    const [click, setClick] = useState<boolean>(false);
 
     const handleClick = (name: string) => {
         setActive(name);
@@ -55,12 +58,22 @@ const Header: FC = () => {
                     </li>
                 </ul>
 
-                <span className="material-symbols-outlined">
-                    menu
-                </span>
-                <span className="material-symbols-outlined">
-                    close
-                </span>
+                <div className='text-3xl cursor-pointer text-white menu'
+                    onClick={() => setClick(!click)}>
+
+                    {click == true ?
+                        <div>
+                            <CgClose />
+                            <div className='w-full bg-black absolute px-10 left-0 top-0'>
+                                hi
+                            </div>
+                        </div>
+                        :
+                        <div>
+                            <RiMenu4Line />
+                        </div>
+                    }
+                </div>
             </div>
         </header >
     )
