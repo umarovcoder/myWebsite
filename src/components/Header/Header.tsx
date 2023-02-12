@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { Link } from 'react-router-dom'
 import './Header.scss';
 
@@ -16,7 +16,7 @@ const Header: FC = () => {
     };
 
     return (
-        <header className='sticky py-7 opacity-80 truncate'>
+        <header className='sticky py-5 opacity-80 truncate'>
             <div className='flex justify-between items-center w-full max-w-[1200px] mx-auto navbar'>
                 <h2 className="text-3xl font-bold cursor-pointer text-white dark:text-white">
                     <Link to={'/'}>Alisher <br /> Umarov.</Link>
@@ -55,9 +55,12 @@ const Header: FC = () => {
                     </li>
                 </ul>
 
-                <div className="menu-toggle">
-                    <i className="fas fa-bars"></i>
-                </div>
+                <span className="material-symbols-outlined">
+                    menu
+                </span>
+                <span className="material-symbols-outlined">
+                    close
+                </span>
             </div>
         </header >
     )
