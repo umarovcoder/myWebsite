@@ -63,9 +63,9 @@ const Header: FC = () => {
 
                     {click == true ?
                         <div>
-                            <CgClose/>
+                            <CgClose />
                             <div className='w-full bg-black absolute px-10 left-0 top-0'>
-                                    hi
+                                hi
                             </div>
                         </div>
                         :
