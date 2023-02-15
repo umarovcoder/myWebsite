@@ -1,8 +1,8 @@
-import Home from './pages/Home/Home'
+import Home from './pages/Home/Home';
 import About from './pages/About/About'
-import Projects from './pages/Projects/Projects'
-import Contact from './pages/Contact/Contact'
-import Articles from './pages/Articles/Articles'
+import Projects from './pages/Projects/Projects';
+import Contact from './pages/Contact/Contact';
+import Articles from './pages/Articles/Articles';
 
 
 export const routes = [
@@ -11,4 +11,4 @@ export const routes = [
     {path: `/projects`, element: <Projects />},
     {path: `/contact`, element: <Contact />},
     {path: `/articles`, element: <Articles />},
-]
+];
