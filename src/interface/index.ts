@@ -1,3 +1,3 @@
-export interface Type {
+export interface HandleType {
     name: string
 }

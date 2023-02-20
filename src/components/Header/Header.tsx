@@ -1,6 +1,5 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { slide as Menu } from 'react-burger-menu';
 import { RiMenu4Line } from 'react-icons/ri';
 import { CgClose } from 'react-icons/cg';
 import './Header.scss';
@@ -20,10 +19,6 @@ const Header: FC = () => {
     };
 
 
-    const showSettings = (event: any) => {
-        event.preventDefault()
-    }
-
     return (
         <header className='sticky py-5 opacity-80 truncate'>
             <div className='flex justify-between items-center w-full max-w-[1200px] mx-auto navbar'>
@@ -31,41 +26,38 @@ const Header: FC = () => {
                     <Link to={'/'}>Alisher <br /> Umarov.</Link>
                 </h2>
 
-                <Menu right>
-                    <ul className='flex flex-row items-center gap-10 text-white navbar-nav'>
-                        <li
-                            onClick={() => handleClick('home')}
-                            className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                        >
-                            <Link to={'/'} className={active === 'home' ? 'active' : ''}>Home</Link>
-                        </li>
-                        <li
-                            onClick={() => handleClick('about')}
-                            className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                        >
-                            <Link className={active === 'about' ? 'active' : ''} to={'/about'}>About</Link>
-                        </li>
-                        <li
-                            onClick={() => handleClick('articles')}
-                            className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                        >
-                            <Link className={active === 'articles' ? 'active' : ''} to={'/articles'}>Articles</Link>
-                        </li>
-                        <li
-                            onClick={() => handleClick('projects')}
-                            className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                        >
-                            <Link className={active === 'projects' ? 'active' : ''} to={'/projects'}>Projects</Link>
-                        </li>
-                        <li
-                            onClick={() => handleClick('contact')}
-                            className='text-xl cursor-pointer hover:text-[#2AB7A6]'
-                        >
-                            <Link className={active === 'contact' ? 'active' : ''} to={'/contact'}>Contact</Link>
-                        </li>
-                        <a onClick={showSettings} className="menu-item--small" href="">Settings</a>
-                    </ul>
-                </Menu>
+                <ul className='flex flex-row items-center gap-10 text-white navbar-nav'>
+                    <li
+                        onClick={() => handleClick('home')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link to={'/'} className={active === 'home' ? 'active' : ''}>Home</Link>
+                    </li>
+                    <li
+                        onClick={() => handleClick('about')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link className={active === 'about' ? 'active' : ''} to={'/about'}>About</Link>
+                    </li>
+                    <li
+                        onClick={() => handleClick('articles')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link className={active === 'articles' ? 'active' : ''} to={'/articles'}>Articles</Link>
+                    </li>
+                    <li
+                        onClick={() => handleClick('projects')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link className={active === 'projects' ? 'active' : ''} to={'/projects'}>Projects</Link>
+                    </li>
+                    <li
+                        onClick={() => handleClick('contact')}
+                        className='text-xl cursor-pointer hover:text-[#2AB7A6]'
+                    >
+                        <Link className={active === 'contact' ? 'active' : ''} to={'/contact'}>Contact</Link>
+                    </li>
+                </ul>
             </div>
         </header >
     )
