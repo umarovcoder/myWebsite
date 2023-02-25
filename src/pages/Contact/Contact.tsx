@@ -4,7 +4,7 @@ const Contact: FC = () => {
   return (
     <>
     <title>Contact - Alisher</title>
-      <div className='text-white'>Contafffct</div>
+      <div className='container text-white'>Contact</div>
     </>
   )
 }
