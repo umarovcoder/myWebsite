@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import me from '../../assets/Imgs/me2.jpg';
+import me from '../../assets/Imgs/mee.jpg';
 
 
 const About: FC = () => {
@@ -7,7 +7,7 @@ const About: FC = () => {
     <>
       <title>About - Alisher</title>
       <div className='container flex justify-between pt-32 gap-[10rem]'>
-        <div className='flex-col'>
+        <div className='flex-col w-2/4'>
           <h1 className='text-white text-5xl'>
           Hi, I'm a Alisher Umarov, a tech and programming enthusiast
           </h1>
