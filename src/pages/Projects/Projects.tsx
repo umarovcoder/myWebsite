@@ -5,7 +5,7 @@ const Projects: FC = () => {
     <>
       <title>Projects - ALisher</title>
       <div className='container'>
-        Projects projectlar qo'shilmagan
+         <p>projectlar qo'shilmagan</p>
       </div>
     </>
   )
