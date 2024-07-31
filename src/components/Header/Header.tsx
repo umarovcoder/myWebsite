@@ -12,11 +12,16 @@ const Header: FC = () => {
     });
 
     const [active, setActive] = useState<string>('home');
-    // const [click, setClick] = useState<boolean>(false);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     const handleClick = (name: string) => {
         setActive(name);
+        setMenuOpen(false);
     };
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen)
+    }
 
 
     return (
@@ -26,7 +31,11 @@ const Header: FC = () => {
                     <Link to={'/'}>Alisher <br /> Umarov.</Link>
                 </h2>
 
-                <ul className='flex flex-row items-center gap-10 text-white navbar-nav'>
+                <div className="burger-menu" onClick={toggleMenu}>
+                    {menuOpen ? <CgClose /> : <RiMenu4Line />}
+                </div>
+
+                <ul  className={`navbar-nav ${menuOpen ? 'active' : ''}`}>
                     <li
                         onClick={() => handleClick('home')}
                         className='text-xl cursor-pointer hover:text-[#2AB7A6]'
