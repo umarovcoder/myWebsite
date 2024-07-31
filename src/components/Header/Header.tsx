@@ -16,12 +16,7 @@ const Header: FC = () => {
 
     const handleClick = (name: string) => {
         setActive(name);
-        setMenuOpen(false);
     };
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen)
-    }
 
 
     return (
@@ -31,11 +26,7 @@ const Header: FC = () => {
                     <Link to={'/'}>Alisher <br /> Umarov.</Link>
                 </h2>
 
-                <div className="burger-menu" onClick={toggleMenu}>
-                    {menuOpen ? <CgClose /> : <RiMenu4Line />}
-                </div>
-
-                <ul  className={`navbar-nav ${menuOpen ? 'active' : ''}`}>
+                <ul  className='flex flex-row items-center gap-10 text-white navbar-nav'>
                     <li
                         onClick={() => handleClick('home')}
                         className='text-xl cursor-pointer hover:text-[#2AB7A6]'
