@@ -12,7 +12,7 @@ const Header: FC = () => {
     });
 
     const [active, setActive] = useState<string>('home');
-    const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    // const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
     const handleClick = (name: string) => {
         setActive(name);
