@@ -11,6 +11,7 @@ const Contact: FC = () => {
             <input className='w-[500px] p-2 rounded-sm outline-none text-black' type="text" placeholder='Name' />
             <input className='w-[500px] p-2 rounded-sm outline-none text-black' type="email" placeholder='Email' />
             <input className='w-[500px] p-2 rounded-sm outline-none text-black' type="number" placeholder='Number' />
+            <button>Send</button>
           </div>
         </form>
       </div>
