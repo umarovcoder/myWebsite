@@ -1,48 +1,6 @@
 import { FC } from 'react';
 
 const Contact: FC = () => {
-  
-//   document.querySelector('.telegram-form')?.addEventListener('submit', function (e: Event) {
-//     e.preventDefault();
-
-//     const token: string = "7483502595:AAGi6HGAfqRZa6vnRT1ylnOOkINdB_62flU";
-//     const chat_id: string = "-4552570818";
-    
-//     const name = (document.querySelector('input[name="name"]') as HTMLInputElement)?.value;
-//     const phone = (document.querySelector('input[name="phone"]') as HTMLInputElement)?.value;
-//     const email = (document.querySelector('input[name="email"]') as HTMLInputElement)?.value;
-//     const text = (document.querySelector('textarea[name="text"]') as HTMLTextAreaElement)?.value;
-
-//     const message: string = `
-//         Name: ${name}
-//         Phone: ${phone}
-//         Email: ${email}
-//         Description: ${text}
-//     `;
-
-//     fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify({
-//             chat_id: chat_id,
-//             text: message,
-//             parse_mode: 'HTML'
-//         })
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//         if (data.ok) {
-//             console.log('Success!');
-//             window.location.reload();
-//         } else {
-//             console.error('Telegram API error:', data);
-//         }
-//     })
-//     .catch(error => console.error('Error:', error));
-// });
-
 
   return (
     <>

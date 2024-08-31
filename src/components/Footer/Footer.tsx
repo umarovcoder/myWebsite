@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import CommentsComponent from '../comments';
 
 const Footer: FC = () => {
     return (
@@ -41,8 +42,9 @@ const Footer: FC = () => {
                     </Link>
                 </div>
                 <div className='flex justify-center mt-5'>
-                    <p className='text-slate-300 text-1xl'>Copyright © 2023 • Alisher's blog - All rights reserved.</p>
+                    <p className='text-slate-300 text-1xl'>Copyright © 2024 • Alisher's blog - All rights reserved.</p>
                 </div>
+                <CommentsComponent/>
             </div>
         </>
     )

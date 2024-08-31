@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import me from '../../assets/Imgs/mee.jpg';
+// import me from '../../assets/Imgs/mee.jpg';
 
 
 const About: FC = () => {
@@ -15,7 +15,7 @@ const About: FC = () => {
             Currently Programming has become an integral part of my life. <br />
           </p>
         </div>
-        <img className='h-[412px] w-[412px] rounded-2xl object-cover rotate-3' src={me} alt="text" />
+        {/* <img className='h-[412px] w-[412px] rounded-2xl object-cover rotate-3' src={me} alt="text" /> */}
       </div>
     </>
   )
