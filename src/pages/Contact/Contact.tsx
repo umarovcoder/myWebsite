@@ -8,6 +8,9 @@ const Contact: FC = () => {
       <title>Contact - Alisher</title>
       <div className='container text-white'>
         <form className='telegram-form'>
+
+          {/* input formlar */}
+
           {/* <div className='flex flex-col gap-4 w-[100%] pt-28'>
             <h1>Contact with me</h1>
             <input className='w-[500px] p-2 rounded-sm outline-none text-black' type="text" placeholder='Name' name='name' />
