@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import me from '../../assets/Imgs/mee.jpg';
+import me from '../../assets/Imgs/me.jpg';
 
 
 const About: FC = () => {
