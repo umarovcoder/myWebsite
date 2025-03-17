@@ -10,7 +10,9 @@ const Home: FC = () => {
           >
             Hey, I’m Alisher, a frontend developer
           </h1>
-          <p className='text-white text-1xl py-3 w-[60%] select-none'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias architecto sequi exercitationem eos, sint neque quam nostrum assumenda repellat fugiat!</p>
+          <p className='text-white text-1xl py-3 w-[60%]'>I am passionate about programming and love Linux. I am always eager to learn new technologies, write clean code, and build perfect user interfaces. For me, frontend development is not just a job but a true passion.
+
+</p>
       </div>
     </>
   )
