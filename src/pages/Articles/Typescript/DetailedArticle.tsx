@@ -49,12 +49,12 @@ const Articles: FC = () => {
             <pre className='bg-gray-900 p-4 rounded-lg mb-4'>
               <code className='text-green-400'>
                 {`let isDone: boolean = false;
-let age: number = 30;
-let userName: string = "Alisher";
-let list: number[] = [1, 2, 3];
-let tuple: [string, number] = ["hello", 10];
-enum Color {Red, Green, Blue};
-let notSure: any = 4;`}
+                  let age: number = 30;
+                  let userName: string = "Alisher";
+                  let list: number[] = [1, 2, 3];
+                  let tuple: [string, number] = ["hello", 10];
+                  enum Color {Red, Green, Blue};
+                  let notSure: any = 4;`}
               </code>
             </pre>
             <h3 className='text-white text-2xl mb-3'>Advanced Types</h3>
