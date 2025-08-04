@@ -30,20 +30,11 @@ Bu — TypeScript va React yordamida yozilgan oddiy, minimalist blog veb-sayti. 
  Admin panel
 
 
-## 🛠️ O‘rnatish
+## 🛠️ Muallif
 
-```bash
-git clone https://github.com/username/my-blog.git
-cd my-blog
-npm install
-npm run dev
-
-
- 👤 Muallif
 umarovcoder
 Telegram: @umarov511
 2025-yil, O‘zbekiston
 
 📄 Litsenziya
 MIT © 2025 — Mualliflik huquqlari himoyalangan
-
