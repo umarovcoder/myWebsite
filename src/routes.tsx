@@ -7,11 +7,11 @@ import DetailedArticle from './pages/Articles/Typescript/DetailedArticle';
 
 
 export const routes = [
-    {path: `/`, element: <Home />},
-    {path: `/about`, element: <About />},
-    {path: `/projects`, element: <Projects />},
-    {path: `/contact`, element: <Contact />},
-    {path: `/articles`, element: <Articles />},
-    {path: `/articles/:articleId`, element: <DetailedArticle/>}
+    { path: `/`, element: <Home /> },
+    { path: `/about`, element: <About /> },
+    { path: `/projects`, element: <Projects /> },
+    { path: `/contact`, element: <Contact /> },
+    { path: `/articles`, element: <Articles /> },
+    { path: `/articles/:articleId`, element: <DetailedArticle /> }
 
 ];

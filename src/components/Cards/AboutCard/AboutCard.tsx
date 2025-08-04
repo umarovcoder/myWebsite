@@ -18,7 +18,7 @@ const AboutCard: FC = () => {
         className='container py-1 px-12 w-2/5'
         style={{ marginTop: '80px' }}
       >
-        
+
       </div>
     </div>
   )
