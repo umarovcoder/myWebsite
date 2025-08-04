@@ -17,20 +17,17 @@ Bu — TypeScript va React yordamida yozilgan oddiy, minimalist blog veb-sayti. 
 - 🔄 Dynamic routing orqali postlar bilan ishlash
 - 🎨 Minimalist dizayn (desktop uchun)
 
-## 📁 Loyihaning tuzilmasi
+## 📌 Rejalar (Kelajakda)
 
-my-blog/
-├── public/
-├── src/
-│ ├── components/ # UI komponentlar
-│ ├── pages/ # Har bir sahifa (Home, Post)
-│ ├── data/ # Mahalliy post ma'lumotlari (JSON)
-│ ├── App.tsx
-│ └── main.tsx
-├── index.html
-├── tailwind.config.js
-├── tsconfig.json
-└── README.md
+ Responsive dizayn (mobil uchun moslashuv)
+
+ Firebase bilan backend ulash
+
+ Post qo‘shish va tahrirlash imkoniyati
+
+ Auth (Google orqali kirish)
+
+ Admin panel
 
 
 ## 🛠️ O‘rnatish
@@ -42,17 +39,6 @@ npm install
 npm run dev
 
 
-📌 Rejalar (Kelajakda)
- Responsive dizayn (mobil uchun moslashuv)
-
- Firebase bilan backend ulash
-
- Post qo‘shish va tahrirlash imkoniyati
-
- Auth (Google orqali kirish)
-
- Admin panel
-
  👤 Muallif
 umarovcoder
 Telegram: @umarov511
@@ -60,3 +46,4 @@ Telegram: @umarov511
 
 📄 Litsenziya
 MIT © 2025 — Mualliflik huquqlari himoyalangan
+
