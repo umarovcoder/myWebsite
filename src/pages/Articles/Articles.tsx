@@ -44,17 +44,17 @@ const Articles: FC = () => {
   return (
     <>
       <title>Articles - Alisher</title>
-      <div className='container pt-32'>
+      <div className='container pt-20 md:pt-28 lg:pt-32 px-4 sm:px-6 md:px-8'>
         <div>
-          <h1 className='text-white text-5xl w-[60%]'>Writing on software and programming</h1>
-          <p className='text-1xl text-white py-3'>Writing my thoughts about IT, programming and more</p>
+          <h1 className='text-white text-3xl sm:text-4xl md:text-5xl w-full md:w-3/5'>Writing on software and programming</h1>
+          <p className='text-white text-sm md:text-base lg:text-lg py-3 md:py-4'>Writing my thoughts about IT, programming and more</p>
         </div>
 
-        <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
           {articles.map((article) => (
-            <div key={article.id} className='bg-gray-800 p-6 rounded-lg shadow-lg'>
-              <h2 className='text-white text-3xl mb-4'>{article.title}</h2>
-              <p className='text-white text-lg mb-4'>{article.description}</p>
+            <div key={article.id} className='bg-gray-800 p-4 sm:p-5 md:p-6 rounded-lg shadow-lg'>
+              <h2 className='text-white text-2xl md:text-3xl mb-3 md:mb-4'>{article.title}</h2>
+              <p className='text-white text-base md:text-lg mb-3 md:mb-4'>{article.description}</p>
               <Link to={`/articles/${article.id}`} className='text-blue-400 underline'>
                 Read More
               </Link>
