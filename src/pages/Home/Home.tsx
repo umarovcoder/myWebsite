@@ -8,7 +8,7 @@ const Home: FC = () => {
         <h1
           className='text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl w-full md:w-1/2 select-none'
         >
-          Hey, I’m Alisher, a frontend developer
+          hello $guest. welcome to my website.
         </h1>
         <p className='text-white text-sm md:text-base lg:text-lg py-3 md:py-4 lg:py-6 w-full md:w-3/5'>I am passionate about programming and love Linux. I am always eager to learn new technologies, write clean code, and build perfect user interfaces. For me, frontend development is not just a job but a true passion.
 
