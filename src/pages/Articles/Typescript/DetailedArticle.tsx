@@ -1,170 +1,106 @@
 import { FC } from 'react';
 import { useParams } from 'react-router-dom';
+import { useLanguage } from '../../../context/LanguageContext';
 
-const Articles: FC = () => {
-  return (
-    <>
-      <title>Articles - Alisher</title>
-      <div className='container pt-20 md:pt-28 lg:pt-32 px-4 sm:px-6 md:px-8'>
-        <div>
-          <h1 className='text-white text-3xl sm:text-4xl md:text-5xl w-full md:w-3/5'>Writing on software and programming</h1>
-          <p className='text-white text-sm md:text-base lg:text-lg py-3 md:py-4'>Writing my thoughts about IT, programming and more</p>
-        </div>
+const DetailedArticle: FC = () => {
+  const { articleId } = useParams();
+  const { language } = useLanguage();
+  const uz = language === 'uz';
 
-        <div className='mt-8 md:mt-10'>
-          <article className='bg-gray-800 p-4 sm:p-6 lg:p-8 rounded-lg'>
-            <h2 className='text-white text-2xl md:text-3xl mb-3 md:mb-4'>Introduction to TypeScript</h2>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
-            </p>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Why TypeScript?</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              TypeScript offers several benefits, including static type checking, better code readability, and improved developer experience. It helps catch errors early in the development process, making it easier to maintain and scale your codebase.
-            </p>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Key Features</h3>
-            <ul className='list-disc list-inside text-white text-base md:text-lg mb-3 md:mb-4'>
-              <li>Static type checking</li>
-              <li>Enhanced IDE support</li>
-              <li>Compatibility with JavaScript</li>
-              <li>Rich type definitions</li>
-              <li>Advanced type inference</li>
-            </ul>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Getting Started</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              To get started with TypeScript, you need to install it via npm:
-            </p>
-            <pre className='bg-gray-900 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto'>
-              <code className='text-green-400'>$ npm install -g typescript</code>
-            </pre>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              You can then create a TypeScript file with the .ts extension and compile it to JavaScript using the TypeScript compiler:
-            </p>
-            <pre className='bg-gray-900 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto'>
-              <code className='text-green-400'>$ tsc filename.ts</code>
-            </pre>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Basic Types</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              TypeScript supports various basic types including string, number, boolean, array, tuple, enum, and any. Here are some examples:
-            </p>
-            <pre className='bg-gray-900 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto'>
-              <code className='text-green-400'>
-                {`let isDone: boolean = false;
-                  let age: number = 30;
-                  let userName: string = "Alisher";
-                  let list: number[] = [1, 2, 3];
-                  let tuple: [string, number] = ["hello", 10];
-                  enum Color {Red, Green, Blue};
-                  let notSure: any = 4;`}
-              </code>
-            </pre>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Advanced Types</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              TypeScript provides advanced types like `union`, intersection, and type aliases to create more flexible and expressive type definitions.
-            </p>
-            <pre className='bg-gray-900 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto'>
-              <code className='text-green-400'>
-                {`type Padding = string | number;
-function padLeft(value: string, padding: Padding) {
-  // ...
-}
+  if (articleId === 'product-checkout-case') {
+    return (
+      <>
+        <title>{uz ? 'Checkout’dagi friction — Product Management case' : 'Checkout friction — Product Management case'}</title>
+        <div className='container pt-20 md:pt-28 lg:pt-32 px-4 sm:px-6 md:px-8'>
+          <p className='text-[#2AB7A6] text-sm mb-3'>{uz ? 'Product Management case' : 'Product Management case'}</p>
+          <article className='bg-gray-800 p-5 sm:p-7 lg:p-10 rounded-lg'>
+            <h1 className='text-white text-3xl md:text-5xl mb-5'>
+              {uz ? 'Checkout’da muammo bor edi. Muammoni qanday topdim va oqimni o‘zgartirdim.' : 'There was a checkout problem. How I found it and changed the flow.'}
+            </h1>
 
-interface Bird {
-  fly(): void;
-  layEggs(): void;
-}
+            <div className='space-y-7 text-slate-300 text-base md:text-lg leading-8'>
+              <section>
+                <h2 className='text-white text-2xl mb-3'>{uz ? 'Kontekst' : 'Context'}</h2>
+                <p>{uz
+                  ? 'Venu — elektronika va maishiy texnika marketplace’i. Saytga foydalanuvchilarning katta qismi reklama orqali kirardi. Muammo shundaki, odamlar mahsulotni ko‘rardi va savatga qo‘shardi, lekin registration formasi chiqganda funnel keskin pasayardi.'
+                  : 'Venu is a marketplace for electronics and home appliances. A large share of users arrived through advertising. Users viewed products and added them to cart, but the funnel dropped sharply when the registration form appeared.'}</p>
+              </section>
 
-interface Fish {
-  swim(): void;
-  layEggs(): void;
-}
-  type Pet = Bird | Fish;`}
-              </code>
-            </pre>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Classes and Interfaces</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              TypeScript extends JavaScript classes with interfaces, access modifiers, and more to facilitate object-oriented programming.
-            </p>
-            <pre className='bg-gray-900 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto'>
-              <code className='text-green-400'>
-                {`class Greeter {
-  private greeting: string;
+              <section>
+                <h2 className='text-white text-2xl mb-3'>{uz ? '1. Muammoni taxmin emas, data bilan ko‘rdim' : '1. I looked at data instead of guessing'}</h2>
+                <p>{uz
+                  ? 'Amplitude’da product_view, add_to_cart, begin_checkout va purchase eventlarini kuzatdim. Funnelni bosqichma-bosqich tekshirganda registration bosqichi foydalanuvchining sotib olish niyatiga juda erta aralashayotganini ko‘rdim.'
+                  : 'I used Amplitude to track product_view, add_to_cart, begin_checkout and purchase. Looking at the funnel showed that registration was interfering with purchase intent too early in the journey.'}</p>
+              </section>
 
-  constructor(message: string) {
-    this.greeting = message;
-  }
+              <section>
+                <h2 className='text-white text-2xl mb-3'>{uz ? '2. Hypothesis' : '2. Hypothesis'}</h2>
+                <p>{uz
+                  ? 'Hypothesis oddiy edi: foydalanuvchini mahsulotni tanlashdan oldin account yaratishga majburlash frictionni oshiryapti. Agar registration’ni checkout’ning oxirgi qismiga sursak, foydalanuvchi avval qiymatni ko‘radi va xarid jarayonini davom ettiradi.'
+                  : 'The hypothesis was simple: forcing users to create an account before they had committed to the product was adding friction. Moving registration later in checkout could let users see value first and complete more of the purchase flow.'}</p>
+              </section>
 
-  greet() {
-    return "Hello, " + this.greeting;
-  }
-}
+              <section>
+                <h2 className='text-white text-2xl mb-3'>{uz ? '3. Yechim' : '3. Solution'}</h2>
+                <p>{uz
+                  ? 'Registration’ni checkout’ning yakuniy qismiga ko‘chirdik: foydalanuvchi savat → manzil → telefon → to‘lov bosqichlaridan o‘tadi va keyin account/registration masalasi hal qilinadi. Maqsad — foydalanuvchining xarid intentini keraksiz erta friction bilan to‘smaslik.'
+                  : 'We moved registration toward the end of checkout: cart → address → phone → payment, and handled the account step later. The goal was to avoid blocking purchase intent with an early friction point.'}</p>
+              </section>
 
-let greeter = new Greeter("world");
+              <section>
+                <h2 className='text-white text-2xl mb-3'>{uz ? '4. Natija va eng muhim saboq' : '4. Result and the important lesson'}</h2>
+                <p>{uz
+                  ? 'Kuzatilgan funnel ma’lumotlarida Add to Cart → Checkout conversion 3.03% dan 4.71% gacha yaxshilangan. Checkout → Purchase esa kichik sample ichida 0% dan 75% gacha ko‘tarilgan. Bu raqamlarni katta statistik g‘alaba deb ko‘rsatish noto‘g‘ri — sample kichik edi va men natijani to‘liq revenue uplift sifatida o‘lchamaganman.'
+                  : 'In the observed funnel data, Add to Cart → Checkout conversion improved from 3.03% to 4.71%. Checkout → Purchase moved from 0% to 75% in a small sample. It would be wrong to present this as a statistically proven win: the sample was small and I did not measure the full revenue uplift.'}</p>
+              </section>
 
-interface Person {
-  firstName: string;
-  lastName: string;
-}
-
-function greeter(person: Person) {
-  return "Hello, " + person.firstName + " " + person.lastName;
-}
-
-let user = { firstName: "Jane", lastName: "User" };`}
-              </code>
-            </pre>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Generics</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              Generics enable the creation of reusable components that work with any data type. This ensures type safety while maintaining flexibility.
-            </p>
-            <pre className='bg-gray-900 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto'>
-              <code className='text-green-400'>
-                {`function identity<T>(arg: T): T {
-  return arg;
-}
-
-let output1 = identity<string>("myString");
-let output2 = identity<number>(100);`}
-              </code>
-            </pre>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>TypeScript with React</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              TypeScript integrates seamlessly with React, providing robust type checking and IntelliSense for props and state.
-            </p>
-            <pre className='bg-gray-900 p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto'>
-              <code className='text-green-400'>
-                {`import React, { FC } from 'react';
-
-interface Props {
-  name: string;
-}
-
-const Hello: FC<Props> = ({ name }) => {
-  return <h1>Hello, {name}</h1>;
-}
-
-export default Hello;`}
-              </code>
-            </pre>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Best Practices</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              Following best practices ensures that you get the most out of TypeScript:
-            </p>
-            <ul className='list-disc list-inside text-white text-base md:text-lg mb-3 md:mb-4'>
-              <li>Consistently use types and interfaces for type safety.</li>
-              <li>Leverage TypeScript's strict mode for enhanced error checking.</li>
-              <li>Integrate TypeScript with your build tools and CI/CD pipeline.</li>
-              <li>Keep your type definitions up to date as your code evolves.</li>
-              <li>Use modern TypeScript features like optional chaining and nullish coalescing.</li>
-            </ul>
-            <h3 className='text-white text-xl md:text-2xl mb-2 md:mb-3'>Conclusion</h3>
-            <p className='text-white text-base md:text-lg mb-3 md:mb-4'>
-              TypeScript enhances JavaScript by adding static types, improving code quality, and boosting developer productivity. Whether you are working on a small project or a large application, TypeScript can help you write more reliable and maintainable code.
-            </p>
+              <section className='border-l-2 border-[#2AB7A6] pl-5'>
+                <h2 className='text-white text-2xl mb-3'>{uz ? 'Men nimani o‘rgandim?' : 'What I learned'}</h2>
+                <ul className='list-disc list-inside space-y-2'>
+                  <li>{uz ? 'Product Manager muammoni feature bilan emas, muammo va funnel bilan boshlashi kerak.' : 'A Product Manager should start with the problem and funnel, not with a feature.'}</li>
+                  <li>{uz ? 'Har bir hypothesis eventlar va segmentlar orqali tekshirilishi kerak.' : 'Every hypothesis should be testable through events and segments.'}</li>
+                  <li>{uz ? '“Natija oshdi” deyishdan oldin measurement dizaynini qurish kerak.' : 'Before saying “results improved”, measurement must be designed properly.'}</li>
+                  <li>{uz ? 'Kichik sample’dagi signal — keyingi test uchun signal, lekin yakuniy xulosa emas.' : 'A signal from a small sample is a reason for the next test, not a final conclusion.'}</li>
+                </ul>
+              </section>
+            </div>
           </article>
         </div>
-      </div>
-    </>
-  )
+      </>
+    );
+  }
+
+  return (
+    <>
+      <title>{uz ? 'TypeScript — Alisher' : 'TypeScript — Alisher'}</title>
+      <div className='container pt-20 md:pt-28 lg:pt-32 px-4 sm:px-6 md:px-8'>
+        <article className='bg-gray-800 p-5 sm:p-7 lg:p-10 rounded-lg'>
+          <p className='text-[#2AB7A6] text-sm mb-3'>Development</p>
+          <h1 className='text-white text-3xl md:text-5xl mb-5'>{uz ? 'TypeScript bilan tanishuv' : 'Introduction to TypeScript'}</h1>
+          <div className='space-y-6 text-slate-300 text-base md:text-lg leading-8'>
+            <p>{uz ? 'TypeScript JavaScript ustiga qurilgan, statik typing imkonini beruvchi til bo‘lib, katta kod bazalarini boshqarishni osonlashtiradi.' : 'TypeScript is a typed language built on JavaScript that improves maintainability and developer tooling.'}</p>
+            <h2 className='text-white text-2xl'>{uz ? 'Asosiy afzalliklari' : 'Key benefits'}</h2>
+            <ul className='list-disc list-inside space-y-2'>
+              <li>{uz ? 'Static type checking' : 'Static type checking'}</li>
+              <li>{uz ? 'IDE va developer experience yaxshiroq' : 'Better IDE and developer experience'}</li>
+              <li>{uz ? 'JavaScript bilan moslik' : 'JavaScript compatibility'}</li>
+              <li>{uz ? 'Katta loyihalarda maintainability' : 'Maintainability at scale'}</li>
+            </ul>
+            <h2 className='text-white text-2xl'>{uz ? 'Oddiy misol' : 'Simple example'}</h2>
+            <pre className='bg-gray-900 p-4 rounded-lg overflow-x-auto'><code className='text-green-400'>{`interface User {
+  name: string;
+  age: number;
 }
 
-export default Articles;
+const user: User = {
+  name: "Alisher",
+  age: 21,
+};`}</code></pre>
+          </div>
+        </article>
+      </div>
+    </>
+  );
+}
+
+export default DetailedArticle;
