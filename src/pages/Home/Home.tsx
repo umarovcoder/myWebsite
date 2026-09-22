@@ -158,25 +158,59 @@ const Home: FC = () => {
                 : 'My technical background helps me communicate with developers and understand implementation trade-offs. Product Management pushes me to choose the right problem, prioritize it and measure the outcome. My current focus is fintech, growth, analytics and AI-powered product workflows.'}
             </p>
             <Link to='/about' className='inline-block text-[#2AB7A6] mt-6 underline underline-offset-4'>
-              {uz ? 'Profilni to‘liq ko‘rish →' : 'View full profile →'}
+              {uz ? 'Profilni to‘liq ko‘rish →' : 'View full profile →'} 
             </Link>
           </div>
         </section>
 
-        {/* Final CTA */}
+        {/* Explore / navigation */}
         <section className='py-20 md:py-28 border-t border-[#303035]'>
-          <div className='flex flex-col md:flex-row md:items-end md:justify-between gap-7'>
+          <div className='flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-10'>
             <div>
-              <p className='text-[#2AB7A6] text-sm mb-3'>{uz ? 'Keyingi qadam' : 'Next step'}</p>
+              <p className='text-[#2AB7A6] text-sm mb-3'>{uz ? 'Ko‘rib chiqing' : 'Explore'}</p>
               <h2 className='text-white text-4xl md:text-5xl lg:text-6xl tracking-[-0.03em]'>
-                {uz ? 'Biror mahsulot ustida ishlaymizmi?' : 'Have a product problem to solve?'}
+                {uz ? 'Ishim va product fikrlashim.' : 'My work and product thinking.'}
               </h2>
             </div>
-            <Link
-              to='/contact'
-              className='inline-flex items-center justify-center rounded-full bg-white text-[#18181B] px-6 py-3.5 font-medium hover:opacity-90 transition whitespace-nowrap'
-            >
-              {uz ? 'Bog‘lanish →' : 'Get in touch →'}
+            <p className='text-slate-400 max-w-md leading-7'>
+              {uz
+                ? 'Loyihalarim, amaliy case’larim va Product Management bo‘yicha yozganlarim bilan tanishing.'
+                : 'Explore selected projects, practical case studies and my thoughts on Product Management.'}
+            </p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-px bg-[#303035] rounded-xl overflow-hidden'>
+            <Link to='/projects' className='group bg-[#18181B] p-7 md:p-8 hover:bg-[#202024] transition'>
+              <span className='text-slate-500 text-sm'>01</span>
+              <h3 className='text-white text-2xl mt-10 group-hover:text-[#2AB7A6] transition'>
+                {uz ? 'Loyihalar' : 'Projects'}
+              </h3>
+              <p className='text-slate-400 mt-3 leading-7'>
+                {uz ? 'Real mahsulotlar va ustida ishlagan loyihalarim.' : 'Products and projects I have worked on.'}
+              </p>
+              <span className='inline-block text-[#2AB7A6] mt-7'>→</span>
+            </Link>
+
+            <Link to='/articles' className='group bg-[#18181B] p-7 md:p-8 hover:bg-[#202024] transition'>
+              <span className='text-slate-500 text-sm'>02</span>
+              <h3 className='text-white text-2xl mt-10 group-hover:text-[#2AB7A6] transition'>
+                {uz ? 'Maqolalar' : 'Articles'}
+              </h3>
+              <p className='text-slate-400 mt-3 leading-7'>
+                {uz ? 'Product, analytics va amaliy tajribalar haqida.' : 'Product, analytics and practical lessons.'}
+              </p>
+              <span className='inline-block text-[#2AB7A6] mt-7'>→</span>
+            </Link>
+
+            <Link to='/about' className='group bg-[#18181B] p-7 md:p-8 hover:bg-[#202024] transition'>
+              <span className='text-slate-500 text-sm'>03</span>
+              <h3 className='text-white text-2xl mt-10 group-hover:text-[#2AB7A6] transition'>
+                {uz ? 'Profil' : 'Profile'}
+              </h3>
+              <p className='text-slate-400 mt-3 leading-7'>
+                {uz ? 'Tajribam, yondashuvim va hozirgi fokusim.' : 'My experience, approach and current focus.'}
+              </p>
+              <span className='inline-block text-[#2AB7A6] mt-7'>→</span>
             </Link>
           </div>
         </section>
