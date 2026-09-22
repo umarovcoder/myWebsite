@@ -22,9 +22,13 @@ const Header: FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const labels = language === 'uz'
-        ? { home: 'Bosh sahifa', about: 'Men haqimda', articles: 'Blog', projects: 'Loyihalar', contact: 'Aloqa' }
-        : { home: 'Home', about: 'About', articles: 'Articles', projects: 'Projects', contact: 'Contact' };
+    const labels = {
+        home: 'Home',
+        about: 'About',
+        articles: 'Articles',
+        projects: 'Projects',
+        contact: 'Contact',
+    };
 
     const handleClick = (name: string) => setActive(name);
 
